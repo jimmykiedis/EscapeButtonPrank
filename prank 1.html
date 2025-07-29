@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuzinho hj?</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffcbdb;
+            position: relative;
+            overflow: hidden;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .yes {
+            background-color: #a0dfa2;
+            color: white;
+        }
+        .no {
+            background-color: #f07c62;
+            color: white;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <h1>Me dê o prazer de comer seu cuzinho hoje?</h1>
+    <div class="button-container">
+        <button class="yes" onclick="window.location.href='https://www.youtube.com/watch?v=hPGu1a3PGTg'">Sim</button>
+        <button id="noButton" class="no" onmouseover="moveButton()">Não</button>
+    </div>
+
+    <script>
+        function moveButton() {
+            const btn = document.getElementById('noButton');
+            btn.style.position = 'absolute';
+            const maxWidth = window.innerWidth - btn.offsetWidth;
+            const maxHeight = window.innerHeight - btn.offsetHeight;
+            const randomX = Math.random() * maxWidth;
+            const randomY = Math.random() * maxHeight;
+            btn.style.left = `${randomX}px`;
+            btn.style.top = `${randomY}px`;
+        }
+    </script>
+</body>
