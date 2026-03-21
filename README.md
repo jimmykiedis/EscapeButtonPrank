@@ -1,5 +1,3 @@
----
-
 # 🎯 Botão Fugitivo – Web Prank
 
 Uma clássica pegadinha da internet desenvolvida em **HTML, CSS e JavaScript**.
