@@ -1,5 +1,11 @@
 # 🎯 Botão Fugitivo – Web Prank
 
+<p align="center">
+  <a href="https://jimmykiedis.github.io/EscapeButtonPrank/">
+    <img src="https://img.shields.io/badge/🚀%20Live%20Demo-FF4B4B?style=for-the-badge" alt="Live Demo">
+  </a>
+</p>
+
 Uma clássica pegadinha da internet desenvolvida em **HTML, CSS e JavaScript**.
 
 O projeto consiste em uma página interativa onde o botão "Não" foge do cursor do usuário, tornando praticamente impossível clicar nele 😈.
