@@ -5,107 +5,137 @@
     <img src="https://img.shields.io/badge/🚀%20Live%20Demo-FF4B4B?style=for-the-badge" alt="Live Demo">
   </a>
   <br>
-  <em>Clique na imagem para acessar a demonstração.</em>
+  <em>Clique no botão para acessar a demonstração.</em>
 </p>
 
 ---
 
-Uma clássica pegadinha da internet desenvolvida em **HTML, CSS e JavaScript**.
+## 🎯 Objetivo
 
-O projeto consiste em uma página interativa onde o botão "Não" foge do cursor do usuário, tornando praticamente impossível clicar nele 😈.
+Criar uma experiência web simples e divertida, utilizando a interação do usuário para desenvolver uma pegadinha baseada em um botão que tenta escapar quando o usuário se aproxima.
 
----
-
-## 📖 Sobre o Projeto
-
-Este projeto foi criado como uma brincadeira interativa inspirada em memes e pegadinhas populares da internet.
-
-A proposta é simples:
-
-* O usuário recebe uma pergunta.
-* O botão **"Sim"** redireciona para um link.
-* O botão **"Não"** se move aleatoriamente pela tela quando o cursor se aproxima.
-
-O foco do projeto foi praticar:
-
-* Manipulação do DOM
-* Eventos de mouse (`onmouseover`)
-* Posicionamento dinâmico de elementos
-* Geração de posições aleatórias na tela
-* Estruturação básica de uma página web
+O projeto tem como objetivo praticar conceitos fundamentais de desenvolvimento front-end, especialmente **manipulação do DOM, eventos de mouse, posicionamento dinâmico e geração de valores aleatórios com JavaScript**.
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## ✨ Funcionalidades
 
-* 🌐 HTML5
-* 🎨 CSS3
-* ⚡ JavaScript (Vanilla JS)
+- ❓ Exibição de uma pergunta com opções de resposta.
+- ✅ Botão **"Sim"** que redireciona o usuário para um link definido pelo projeto.
+- 🏃 Botão **"Não"** que foge quando o cursor se aproxima.
+- 🎲 Geração de posições aleatórias para o botão.
+- 📐 Posicionamento dinâmico considerando as dimensões da janela do navegador.
+- 😈 Interação humorística baseada na dificuldade de clicar no botão **"Não"**.
+- 🌐 Demonstração disponível através do GitHub Pages.
 
 ---
 
-## ⚙️ Como Funciona
+## 🛠 Como utilizar o repositório
 
-Quando o usuário passa o mouse sobre o botão "Não":
+### 📥 1. Clone o repositório
 
-1. O JavaScript altera sua posição para `absolute`
-2. Calcula limites da janela (`window.innerWidth` e `window.innerHeight`)
-3. Gera coordenadas aleatórias
-4. Move o botão para um novo ponto da tela
-
-Trecho principal da lógica:
-
-```javascript
-function moveButton() {
-    const btn = document.getElementById('noButton');
-    btn.style.position = 'absolute';
-    const maxWidth = window.innerWidth - btn.offsetWidth;
-    const maxHeight = window.innerHeight - btn.offsetHeight;
-    const randomX = Math.random() * maxWidth;
-    const randomY = Math.random() * maxHeight;
-    btn.style.left = `${randomX}px`;
-    btn.style.top = `${randomY}px`;
-}
+```bash
+git clone https://github.com/jimmykiedis/EscapeButtonPrank.git
+cd EscapeButtonPrank
 ```
 
+### 🔗 2. Configure o link do botão "Sim"
+
+Abra o arquivo HTML principal do projeto e procure, no início do código, pelo bloco de configuração:
+
+```html
+<script>
+    // ==========================================================
+    // CONFIGURAÇÃO: troque o link abaixo pelo endereço desejado
+    // Se você clonou este repositório, edite apenas esta linha:
+    // ==========================================================
+    const LINK_SIM = "https://www.youtube.com/watch?v=hPGu1a3PGTg";
+    // ==========================================================
+```
+
+Altere apenas o valor da constante `LINK_SIM` para o endereço que deseja abrir ao clicar no botão **"Sim"**.
+
+Por exemplo:
+
+```javascript
+const LINK_SIM = "https://seu-link-aqui.com";
+```
+
+### ▶️ 3. Execute o projeto
+
+Após configurar o link, abra o arquivo HTML principal diretamente no navegador.
+
+O projeto não requer instalação de dependências ou configuração de servidor para funcionar localmente.
+
+### ✏️ 4. Personalize o projeto
+
+Você pode modificar os arquivos HTML, CSS e JavaScript para personalizar:
+
+- Pergunta exibida na página.
+- Textos dos botões.
+- Link associado ao botão **"Sim"**.
+- Aparência e posicionamento dos elementos.
+- Comportamento do botão **"Não"**.
+- Animações e efeitos visuais.
+
+> **Dica:** para uma personalização rápida, a constante `LINK_SIM` é a principal configuração que precisa ser alterada.
+
 ---
 
-## 🚀 Como Executar
+## 🏗️ Estratégia de implementação
 
-1. Baixe o arquivo `.html`
-2. Abra no navegador
-3. Tente clicar no botão "Não"
-4. Falhe miseravelmente 😌
+A aplicação utiliza uma estrutura simples baseada em **HTML, CSS e JavaScript**, separando a estrutura visual da lógica de interação.
+
+### Interface (HTML/CSS)
+
+Responsável pela estrutura e apresentação da página, incluindo:
+
+- Pergunta apresentada ao usuário.
+- Botões de resposta.
+- Layout da página.
+- Estilização dos elementos.
+- Posicionamento visual dos componentes.
+
+### Lógica e interação (JavaScript)
+
+O JavaScript controla o comportamento do botão **"Não"** através de eventos de interação.
+
+Quando o cursor passa sobre o botão:
+
+1. O botão recebe posicionamento `absolute`.
+2. As dimensões disponíveis da janela são calculadas.
+3. São geradas coordenadas aleatórias.
+4. O botão é reposicionado para uma nova posição dentro da área visível.
+
+Essa abordagem utiliza a manipulação direta de propriedades CSS através do **DOM**, sem necessidade de bibliotecas ou frameworks externos.
+
+---
+
+## 🛠️ Tecnologias
+
+- **HTML5** — Estrutura da página e dos elementos da interface.
+- **CSS3** — Estilização e posicionamento dos elementos.
+- **JavaScript (Vanilla JS)** — Lógica da aplicação, eventos e movimentação do botão.
+- **DOM API** — Manipulação dos elementos HTML em tempo de execução.
+- **GitHub Pages** — Hospedagem da demonstração do projeto.
 
 ---
 
-## 🎓 Conceitos Praticados
+## 📁 Estrutura sugerida
 
-* Eventos de interação
-* Manipulação dinâmica de estilo
-* Responsividade básica
-* Experiência do usuário (UX humorística)
+```text
+EscapeButtonPrank/
+│
+├── index.html
+├── style.css
+├── script.js
+└── README.md
+```
 
----
-
-## 📌 Observações
-
-Este projeto tem fins exclusivamente recreativos e educacionais.
-
-Ideal para:
-
-* Praticar JavaScript básico
-* Demonstrar manipulação de eventos
-* Fazer seus amigos passarem raiva por 30 segundos
+A estrutura pode ser expandida conforme novas funcionalidades sejam adicionadas ao projeto.
 
 ---
 
-## 💡 Possíveis Melhorias Futuras
+## 📄 Licença
 
-* 🎵 Sons ao tentar clicar
-* 📱 Melhor adaptação para mobile
-* 🧠 Aumentar velocidade conforme o tempo passa
-* 🎨 Animações suaves com `transition`
-* 🏆 Contador de tentativas
-
----
+Sinta-se à vontade para usar, editar e compartilhar! Espalhe amor por onde for. 🫡
