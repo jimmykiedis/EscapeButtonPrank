@@ -8,6 +8,8 @@
   <em>Clique na imagem para acessar a demonstração.</em>
 </p>
 
+---
+
 Uma clássica pegadinha da internet desenvolvida em **HTML, CSS e JavaScript**.
 
 O projeto consiste em uma página interativa onde o botão "Não" foge do cursor do usuário, tornando praticamente impossível clicar nele 😈.
