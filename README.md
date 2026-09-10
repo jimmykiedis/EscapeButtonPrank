@@ -1,127 +1,127 @@
-# 🎯 Botão Fugitivo – Web Prank
+# 🎯 Escape Button – Web Prank
 
 <p align="center">
   <a href="https://jimmykiedis.github.io/EscapeButtonPrank/">
     <img src="https://img.shields.io/badge/🚀%20Live%20Demo-FF4B4B?style=for-the-badge" alt="Live Demo">
   </a>
   <br>
-  <em>Clique no botão para acessar a demonstração.</em>
+  <em>Click the button to access the live demo.</em>
 </p>
 
 ---
 
-## 🎯 Objetivo
+## 🎯 Objective
 
-Criar uma experiência web simples e divertida, utilizando a interação do usuário para desenvolver uma pegadinha baseada em um botão que tenta escapar quando o usuário se aproxima.
+Create a simple and fun web experience that uses user interaction to build a prank based on a button that tries to escape whenever the user approaches it.
 
-O projeto tem como objetivo praticar conceitos fundamentais de desenvolvimento front-end, especialmente **manipulação do DOM, eventos de mouse, posicionamento dinâmico e geração de valores aleatórios com JavaScript**.
-
----
-
-## ✨ Funcionalidades
-
-- ❓ Exibição de uma pergunta com opções de resposta.
-- ✅ Botão **"Sim"** que redireciona o usuário para um link definido pelo projeto.
-- 🏃 Botão **"Não"** que foge quando o cursor se aproxima.
-- 🎲 Geração de posições aleatórias para o botão.
-- 📐 Posicionamento dinâmico considerando as dimensões da janela do navegador.
-- 😈 Interação humorística baseada na dificuldade de clicar no botão **"Não"**.
-- 🌐 Demonstração disponível através do GitHub Pages.
+The project aims to practice fundamental front-end development concepts, especially **DOM manipulation, mouse events, dynamic positioning, and random value generation with JavaScript**.
 
 ---
 
-## 🛠 Como utilizar o repositório
+## ✨ Features
 
-### 📥 1. Clone o repositório
+- ❓ Display of a question with answer options.
+- ✅ **"Yes"** button that redirects the user to a link defined in the project.
+- 🏃 **"No"** button that runs away when the cursor approaches it.
+- 🎲 Random position generation for the button.
+- 📐 Dynamic positioning based on the browser window dimensions.
+- 😈 Humorous interaction based on the difficulty of clicking the **"No"** button.
+- 🌐 Live demonstration available through GitHub Pages.
+
+---
+
+## 🛠 How to Use the Repository
+
+### 📥 1. Clone the Repository
 
 ```bash
 git clone https://github.com/jimmykiedis/EscapeButtonPrank.git
 cd EscapeButtonPrank
 ```
 
-### 🔗 2. Configure o link do botão "Sim"
+### 🔗 2. Configure the "Yes" Button Link
 
-Abra o arquivo HTML principal do projeto e procure, no início do código, pelo bloco de configuração:
+Open the project's main HTML file and look for the configuration block near the beginning of the code:
 
 ```html
 <script>
     // ==========================================================
-    // CONFIGURAÇÃO: troque o link abaixo pelo endereço desejado
-    // Se você clonou este repositório, edite apenas esta linha:
+    // CONFIGURATION: replace the link below with the desired URL
+    // If you cloned this repository, edit only this line:
     // ==========================================================
     const LINK_SIM = "https://www.youtube.com/watch?v=hPGu1a3PGTg";
     // ==========================================================
 ```
 
-Altere apenas o valor da constante `LINK_SIM` para o endereço que deseja abrir ao clicar no botão **"Sim"**.
+Change only the value of the `LINK_SIM` constant to the URL you want to open when the user clicks the **"Yes"** button.
 
-Por exemplo:
+For example:
 
 ```javascript
-const LINK_SIM = "https://seu-link-aqui.com";
+const LINK_SIM = "https://your-link-here.com";
 ```
 
-### ▶️ 3. Execute o projeto
+### ▶️ 3. Run the Project
 
-Após configurar o link, abra o arquivo HTML principal diretamente no navegador.
+After configuring the link, open the project's main HTML file directly in your browser.
 
-O projeto não requer instalação de dependências ou configuração de servidor para funcionar localmente.
+The project does not require any dependencies or server configuration to run locally.
 
-### ✏️ 4. Personalize o projeto
+### ✏️ 4. Customize the Project
 
-Você pode modificar os arquivos HTML, CSS e JavaScript para personalizar:
+You can modify the HTML, CSS, and JavaScript files to customize:
 
-- Pergunta exibida na página.
-- Textos dos botões.
-- Link associado ao botão **"Sim"**.
-- Aparência e posicionamento dos elementos.
-- Comportamento do botão **"Não"**.
-- Animações e efeitos visuais.
+- The question displayed on the page.
+- Button labels.
+- The URL associated with the **"Yes"** button.
+- The appearance and positioning of the elements.
+- The behavior of the **"No"** button.
+- Animations and visual effects.
 
-> **Dica:** para uma personalização rápida, a constante `LINK_SIM` é a principal configuração que precisa ser alterada.
+> **Tip:** For quick customization, the `LINK_SIM` constant is the main configuration that needs to be changed.
 
 ---
 
-## 🏗️ Estratégia de implementação
+## 🏗️ Implementation Strategy
 
-A aplicação utiliza uma estrutura simples baseada em **HTML, CSS e JavaScript**, separando a estrutura visual da lógica de interação.
+The application uses a simple structure based on **HTML, CSS, and JavaScript**, separating the visual structure from the interaction logic.
 
 ### Interface (HTML/CSS)
 
-Responsável pela estrutura e apresentação da página, incluindo:
+Responsible for the structure and presentation of the page, including:
 
-- Pergunta apresentada ao usuário.
-- Botões de resposta.
-- Layout da página.
-- Estilização dos elementos.
-- Posicionamento visual dos componentes.
+- The question displayed to the user.
+- Answer buttons.
+- Page layout.
+- Element styling.
+- Visual positioning of the components.
 
-### Lógica e interação (JavaScript)
+### Logic and Interaction (JavaScript)
 
-O JavaScript controla o comportamento do botão **"Não"** através de eventos de interação.
+JavaScript controls the behavior of the **"No"** button through interaction events.
 
-Quando o cursor passa sobre o botão:
+When the cursor moves over the button:
 
-1. O botão recebe posicionamento `absolute`.
-2. As dimensões disponíveis da janela são calculadas.
-3. São geradas coordenadas aleatórias.
-4. O botão é reposicionado para uma nova posição dentro da área visível.
+1. The button receives `absolute` positioning.
+2. The available browser window dimensions are calculated.
+3. Random coordinates are generated.
+4. The button is repositioned to a new location within the visible area.
 
-Essa abordagem utiliza a manipulação direta de propriedades CSS através do **DOM**, sem necessidade de bibliotecas ou frameworks externos.
-
----
-
-## 🛠️ Tecnologias
-
-- **HTML5** — Estrutura da página e dos elementos da interface.
-- **CSS3** — Estilização e posicionamento dos elementos.
-- **JavaScript (Vanilla JS)** — Lógica da aplicação, eventos e movimentação do botão.
-- **DOM API** — Manipulação dos elementos HTML em tempo de execução.
-- **GitHub Pages** — Hospedagem da demonstração do projeto.
+This approach uses direct manipulation of CSS properties through the **DOM**, without requiring external libraries or frameworks.
 
 ---
 
-## 📁 Estrutura sugerida
+## 🛠️ Technologies
+
+- **HTML5** — Page structure and interface elements.
+- **CSS3** — Element styling and positioning.
+- **JavaScript (Vanilla JS)** — Application logic, events, and button movement.
+- **DOM API** — Runtime manipulation of HTML elements.
+- **GitHub Pages** — Hosting for the project's live demonstration.
+
+---
+
+## 📁 Suggested Structure
 
 ```text
 EscapeButtonPrank/
@@ -132,10 +132,10 @@ EscapeButtonPrank/
 └── README.md
 ```
 
-A estrutura pode ser expandida conforme novas funcionalidades sejam adicionadas ao projeto.
+The structure can be expanded as new features are added to the project.
 
 ---
 
-## 📄 Licença
+## 📄 License
 
-Sinta-se à vontade para usar, editar e compartilhar! Espalhe amor por onde for. 🫡
+Feel free to use, edit, and share! Spread love wherever you go. 🫡
