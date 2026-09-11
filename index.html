@@ -1,187 +1,77 @@
-```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Cuzinho hj?</title>
-
     <script>
         // ==========================================================
-        // CONFIGURAÇÃO
-        // Troque o link abaixo pelo endereço desejado.
+        // CONFIGURAÇÃO: troque o link abaixo pelo endereço desejado
+        // Se você clonou este repositório, edite apenas esta linha:
         // ==========================================================
         const LINK_SIM = "https://www.youtube.com/watch?v=hPGu1a3PGTg";
         // ==========================================================
     </script>
-
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
         body {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-
             height: 100vh;
             margin: 0;
-
             font-family: Arial, sans-serif;
             text-align: center;
-
             background-color: #ffcbdb;
-
             position: relative;
             overflow: hidden;
         }
-
         h1 {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
-
         .button-container {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 20px;
         }
-
         button {
             padding: 15px 30px;
             font-size: 18px;
-
             border: none;
             border-radius: 5px;
-
             cursor: pointer;
-            transition: 0.2s;
+            transition: 0.3s;
         }
-
         .yes {
             background-color: #a0dfa2;
             color: white;
         }
-
-        .yes:hover {
-            transform: scale(1.05);
-        }
-
-        /*
-         * Área de proteção do botão "Não".
-         *
-         * Ela é maior que o botão e invisível.
-         * Quando o mouse entra nessa área, o botão foge.
-         */
-        .no-zone {
-            position: relative;
-
-            /*
-             * Quanto maior esses valores, mais longe
-             * o usuário precisa ficar do botão.
-             */
-            width: 180px;
-            height: 100px;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
         .no {
             background-color: #f07c62;
             color: white;
-
-            position: absolute;
-
-            /*
-             * Impede o botão de receber o mouse antes
-             * do trigger da área externa.
-             */
-            pointer-events: none;
+            position: relative;
         }
     </style>
 </head>
-
 <body>
-
     <h1>Me dê o prazer de comer seu cuzinho hoje?</h1>
-
     <div class="button-container">
-
-        <button
-            class="yes"
-            onclick="window.location.href = LINK_SIM">
-            Sim
-        </button>
-
-        <!--
-            Toda essa região funciona como "sensor".
-            O botão está no centro dela.
-        -->
-        <div
-            id="noZone"
-            class="no-zone"
-            onmouseenter="moveButton()">
-
-            <button id="noButton" class="no">
-                Não
-            </button>
-
-        </div>
-
+        <button class="yes" onclick="window.location.href=LINK_SIM">Sim</button>
+        <button id="noButton" class="no" onmouseover="moveButton()">Não</button>
     </div>
 
     <script>
         function moveButton() {
-
-            const zone = document.getElementById("noZone");
-            const btn = document.getElementById("noButton");
-
-            /*
-             * Tamanho da área de proteção.
-             * Quanto maiores os valores, mais cedo
-             * o botão vai fugir.
-             */
-            const zoneWidth = 180;
-            const zoneHeight = 100;
-
-            /*
-             * Tamanho do botão.
-             */
-            const buttonWidth = btn.offsetWidth;
-            const buttonHeight = btn.offsetHeight;
-
-            /*
-             * Gera uma nova posição aleatória
-             * dentro da área de proteção.
-             */
-            const maxX = zoneWidth - buttonWidth;
-            const maxY = zoneHeight - buttonHeight;
-
-            const randomX = Math.random() * maxX;
-            const randomY = Math.random() * maxY;
-
+            const btn = document.getElementById('noButton');
+            btn.style.position = 'absolute';
+            const maxWidth = window.innerWidth - btn.offsetWidth;
+            const maxHeight = window.innerHeight - btn.offsetHeight;
+            const randomX = Math.random() * maxWidth;
+            const randomY = Math.random() * maxHeight;
             btn.style.left = `${randomX}px`;
             btn.style.top = `${randomY}px`;
         }
-
-        /*
-         * Mantém o botão sempre dentro da área de proteção
-         * mesmo quando a janela é redimensionada.
-         */
-        window.addEventListener("resize", () => {
-            const btn = document.getElementById("noButton");
-
-            btn.style.left = "50%";
-            btn.style.top = "50%";
-            btn.style.transform = "translate(-50%, -50%)";
-        });
     </script>
-
 </body>
 </html>
-```
