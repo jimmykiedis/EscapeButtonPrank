@@ -8,6 +8,14 @@
   <em>Click the button to access the live demo.</em>
 </p>
 
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![DOM](https://img.shields.io/badge/DOM-Manipulation-orange?style=flat)
+![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?style=flat&logo=github&logoColor=white)
+![Status](https://img.shields.io/badge/status-completed-brightgreen)
+![License](https://img.shields.io/badge/license-MIT-blue)
+
 ---
 
 ## 🎯 Objective
